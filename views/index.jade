@@ -2,4 +2,38 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to my inventory
+  
+    // Wrapper
+    #wrapper
+
+        // BOX INFO
+        #inventoryInfo
+            h2 Box Info
+            p
+                strong Name:
+                |  <span id='inventoryInfoName'></span>
+                br
+                strong Id:
+                |  <span id='inventoryInfoId'></span>
+        // /BOX INFO
+
+        // Inventory LIST
+        h2 Inventory List
+        #inventoryList
+            table
+                thead
+                    th BoxID
+                    th Name
+                    th Delete?
+                tbody
+        // Inventory LIST
+        // ADD BOX
+        h2 Add Box
+        #addBox
+            fieldset
+                input#inputBoxName(type='text', placeholder='Name')
+                input#inputBoxId(type='text', placeholder='boxid')
+                button#btnAddBox Add Box
+        // /ADD BOX
+        // /WRAPPER
