@@ -26,6 +26,16 @@ describe("Inventory", function(){
 				done();	
 		});
 	});
+	it('Should not add a single box when id already exists on /addbox POST',function(done){
+		request(server)
+		.post('/inventory/addbox')
+		.send({'id': 5,'name': 'Double'})
+		.end(function(err, res){
+				res.should.have.property('status', 200);
+				res.should.be.json;
+				done();	
+		});
+	});
 	it('Should delete a single box on /deletebox/id DELETE',function(done){
 		request(server)
 		.delete('/inventory/deletebox/5')
