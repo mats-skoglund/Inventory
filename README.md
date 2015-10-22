@@ -10,3 +10,5 @@ Run "npm install" to install required libraries.
 Run "npm start" to start the server
 Navigate to http://localhost:3000 to see firstpage
 While the server is still running, open a new terminal window, cd inteo "Inventory" folder and execute "npm test" to run the tests.
+
+Voila
