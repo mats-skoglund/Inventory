@@ -15,7 +15,7 @@ router.get('/inventorylist', function(req, res, next) {
 	db.serialize(function() {
   		if(!exists) {
     		db.run("CREATE TABLE Inventory (boxid INTEGER, name TEXT)");
-    		db.run("Insert into Inventory VALUES (1,'Elkablar')");
+    		db.run("Insert into Inventory VALUES (1,'Testbox')");
   		}
 	});
 console.log("/inventorylist");
